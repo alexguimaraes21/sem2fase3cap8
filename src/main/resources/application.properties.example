@@ -1,0 +1,54 @@
+# Application Name
+spring.application.name=atv-sem2fase3cap8
+
+# Enable ansi output
+spring.output.ansi.enabled=always
+
+# Spring Boot config
+logging.level.web=info
+logging.level.root=info
+logging.level.sql=info
+server.error.include-message=always
+server.error.include-stacktrace=never
+server.error.include-binding-errors=always
+
+# Server configuration
+server.port=8080
+server.address=0.0.0.0
+
+# Database configuration
+spring.datasource.url=jdbc:oracle:thin:@//oracle.fiap.com.br:1521/ORCL
+spring.datasource.username=
+spring.datasource.password=
+spring.datasource.driver-class-name=oracle.jdbc.OracleDriver
+spring.datasource.hikari.connectionTimeout=10000
+spring.datasource.hikari.maxLifetime=1800000
+spring.datasource.hikari.pool-name=JavaPoolAppGroup21
+
+# JPA config
+spring.jpa.open-in-view=false
+spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto=none
+spring.jpa.properties.hibernate.format_sql=true
+
+# Flyway config
+spring.flyway.enabled=true
+spring.flyway.fail-on-missing-locations=true
+spring.flyway.baseline-on-migrate=true
+spring.flyway.locations=classpath:db.migrations
+
+# Spring Security Params
+spring.security.user.name=alex
+spring.security.user.password=123456789
+spring.security.user.roles={ ADMIN, USER }
+
+# Parameters
+url_api_prefix=/api
+url_api_v1=/v1
+url_public_url_prefix=/public
+security.secret_word=${JWT.SECRET:fiap}
+security.issuer=SmartCityGarbageCollectorAPI
+
+# Spring Locale
+spring.web.locale=pt_BR
+spring.web.locale-resolver=fixed

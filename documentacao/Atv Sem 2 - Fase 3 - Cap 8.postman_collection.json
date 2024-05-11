@@ -1,0 +1,1169 @@
+{
+	"info": {
+		"_postman_id": "6cc6992c-fa25-450c-b9fe-ae9e8bd0a54d",
+		"name": "Atv Sem 2 - Fase 3 - Cap 8",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2457501"
+	},
+	"item": [
+		{
+			"name": "Auth - Register - Admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"FIAP - Admin\",\r\n    \"email\": \"admin@dominio.com\",\r\n    \"password\": \"123456789\",\r\n    \"role\": \"ADMIN\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/auth/register",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Auth - Register - User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"FIAP - User\",\r\n    \"email\": \"user@dominio.com\",\r\n    \"password\": \"123456789\",\r\n    \"role\": \"USER\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/auth/register",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Auth - Login - Admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"admin@dominio.com\",\r\n    \"password\": \"123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/auth/login",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Auth - Login - User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"user@dominio.com\",\r\n    \"password\": \"123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/auth/login",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Collection - Add",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJTbWFydENpdHlHYXJiYWdlQ29sbGVjdG9yQVBJIiwic3ViIjoiYWRtaW5AZG9taW5pby5jb20iLCJleHAiOjE3MTUwMDk1MDJ9.n0I4qOfkbhbiZknmou5m56VzK8M_cHVaFeZiNHiVmfA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\": \"Bairro Santa Maria: Ruas Sizino Patusca a Tenente Americo Moreti\",\r\n    \"startTime\": \"2024-05-06T20:00:00\",\r\n    \"truck\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/api/v1/collection",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"collection"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Collection - Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJTbWFydENpdHlHYXJiYWdlQ29sbGVjdG9yQVBJIiwic3ViIjoiYWxleEBjZ3RlY25vbG9naWEuY29tLmJyIiwiZXhwIjoxNzE0OTM1NjQ5fQ.18b7c3khZZ10RmIDBwt6hynlhnraHz1uXZZ2SWsje-I",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/api/v1/collection?id=1",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"collection"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Collection - FindById",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJTbWFydENpdHlHYXJiYWdlQ29sbGVjdG9yQVBJIiwic3ViIjoiYWRtaW5AZG9taW5pby5jb20iLCJleHAiOjE3MTQ5NDYwMjN9.c14d1Gxk3iMfKCs-G1GCWomzyZkQ-wv-E3rKgVaoyTY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/api/v1/collection?id=2",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"collection"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Collection - FindAll",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJTbWFydENpdHlHYXJiYWdlQ29sbGVjdG9yQVBJIiwic3ViIjoiYWRtaW5AZG9taW5pby5jb20iLCJleHAiOjE3MTUwMDk1MDJ9.n0I4qOfkbhbiZknmou5m56VzK8M_cHVaFeZiNHiVmfA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/api/v1/collection?size=1&page=1",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"collection"
+					],
+					"query": [
+						{
+							"key": "size",
+							"value": "1"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Collection - Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJTbWFydENpdHlHYXJiYWdlQ29sbGVjdG9yQVBJIiwic3ViIjoiYWRtaW5AZG9taW5pby5jb20iLCJleHAiOjE3MTQ5NDYwMjN9.c14d1Gxk3iMfKCs-G1GCWomzyZkQ-wv-E3rKgVaoyTY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"description\": \"Ruas cobertas pela coleta: Rua Flaminio Levy e Maria Mercedes Fea\",\r\n    \"startTime\": \"2024-05-05T20:00:00\",\r\n    \"truck\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/api/v1/collection",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"collection"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Container - Add",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJTbWFydENpdHlHYXJiYWdlQ29sbGVjdG9yQVBJIiwic3ViIjoiYWxleEBjZ3RlY25vbG9naWEuY29tLmJyIiwiZXhwIjoxNzE0OTM1NjQ5fQ.18b7c3khZZ10RmIDBwt6hynlhnraHz1uXZZ2SWsje-I",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"location\": \"Estação de triagem e tratamento de orgânicos Rodovia XPTO\",\r\n    \"capacity\": 35721.12,\r\n    \"currentLevel\": 13\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/api/v1/container",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"container"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Container - Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJTbWFydENpdHlHYXJiYWdlQ29sbGVjdG9yQVBJIiwic3ViIjoiYWRtaW5AZG9taW5pby5jb20iLCJleHAiOjE3MTQ5NDU3OTR9.loefwXqIjzIBymzTpomMTjlBU-wZ7A-EhTxJDy9A_hs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/api/v1/container?id=1",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"container"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Container - FindAll",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJTbWFydENpdHlHYXJiYWdlQ29sbGVjdG9yQVBJIiwic3ViIjoiYWxleEBjZ3RlY25vbG9naWEuY29tLmJyIiwiZXhwIjoxNzE0OTM1NjQ5fQ.18b7c3khZZ10RmIDBwt6hynlhnraHz1uXZZ2SWsje-I",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/api/v1/container",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"container"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Container - FindById",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJTbWFydENpdHlHYXJiYWdlQ29sbGVjdG9yQVBJIiwic3ViIjoiYWxleEBjZ3RlY25vbG9naWEuY29tLmJyIiwiZXhwIjoxNzE0OTM1NjQ5fQ.18b7c3khZZ10RmIDBwt6hynlhnraHz1uXZZ2SWsje-I",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/api/v1/container?id=2",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"container"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Container - Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJTbWFydENpdHlHYXJiYWdlQ29sbGVjdG9yQVBJIiwic3ViIjoiYWxleEBjZ3RlY25vbG9naWEuY29tLmJyIiwiZXhwIjoxNzE0OTM1NjQ5fQ.18b7c3khZZ10RmIDBwt6hynlhnraHz1uXZZ2SWsje-I",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"location\": \"Estação de triagem e tratamento de orgânicos Rodovia XPTO\",\r\n    \"capacity\": 35721.12,\r\n    \"currentLevel\": 13\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/api/v1/container",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"container"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ping",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/api/v1/public/ping",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"public",
+						"ping"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Route - Add",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJTbWFydENpdHlHYXJiYWdlQ29sbGVjdG9yQVBJIiwic3ViIjoiYWRtaW5AZG9taW5pby5jb20iLCJleHAiOjE3MTUwMDk1MDJ9.n0I4qOfkbhbiZknmou5m56VzK8M_cHVaFeZiNHiVmfA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\": \"Bairro Santa Maria: Ruas Sizino Patusca a Tenente Americo Moreti\",\r\n    \"startTime\": \"2024-05-05T20:00:00\",\r\n    \"truck\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/api/v1/route",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"route"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Route - Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJTbWFydENpdHlHYXJiYWdlQ29sbGVjdG9yQVBJIiwic3ViIjoiYWxleEBjZ3RlY25vbG9naWEuY29tLmJyIiwiZXhwIjoxNzE0OTM1NjQ5fQ.18b7c3khZZ10RmIDBwt6hynlhnraHz1uXZZ2SWsje-I",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/api/v1/route?id=1",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"route"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Route - FindById",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJTbWFydENpdHlHYXJiYWdlQ29sbGVjdG9yQVBJIiwic3ViIjoiYWRtaW5AZG9taW5pby5jb20iLCJleHAiOjE3MTQ5NDYwMjN9.c14d1Gxk3iMfKCs-G1GCWomzyZkQ-wv-E3rKgVaoyTY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/api/v1/route?id=2",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"route"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Route - FindAll",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJTbWFydENpdHlHYXJiYWdlQ29sbGVjdG9yQVBJIiwic3ViIjoiYWRtaW5AZG9taW5pby5jb20iLCJleHAiOjE3MTUwMDk1MDJ9.n0I4qOfkbhbiZknmou5m56VzK8M_cHVaFeZiNHiVmfA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/api/v1/route?size=1&page=1",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"route"
+					],
+					"query": [
+						{
+							"key": "size",
+							"value": "1"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Route - Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJTbWFydENpdHlHYXJiYWdlQ29sbGVjdG9yQVBJIiwic3ViIjoiYWRtaW5AZG9taW5pby5jb20iLCJleHAiOjE3MTQ5NDYwMjN9.c14d1Gxk3iMfKCs-G1GCWomzyZkQ-wv-E3rKgVaoyTY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"description\": \"Ruas cobertas pela coleta: Rua Flaminio Levy e Maria Mercedes Fea\",\r\n    \"startTime\": \"2024-05-05T20:00:00\",\r\n    \"truck\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/api/v1/route",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"route"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Truck - Add",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJTbWFydENpdHlHYXJiYWdlQ29sbGVjdG9yQVBJIiwic3ViIjoiYWRtaW5AZG9taW5pby5jb20iLCJleHAiOjE3MTQ5NDQ2NzJ9.Zhdv8Y5mHpx2ecNcG7E9vbYMpNfKfbXqnrZ17PjdTnM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"licensePlate\": \"GAH5790\",\r\n    \"capacity\": 35721.12,\r\n    \"available\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/api/v1/truck",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"truck"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Truck - Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJTbWFydENpdHlHYXJiYWdlQ29sbGVjdG9yQVBJIiwic3ViIjoiYWxleEBjZ3RlY25vbG9naWEuY29tLmJyIiwiZXhwIjoxNzE0OTM1NjQ5fQ.18b7c3khZZ10RmIDBwt6hynlhnraHz1uXZZ2SWsje-I",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/api/v1/truck?id=2",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"truck"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Truck - FindAll",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJTbWFydENpdHlHYXJiYWdlQ29sbGVjdG9yQVBJIiwic3ViIjoiYWxleEBjZ3RlY25vbG9naWEuY29tLmJyIiwiZXhwIjoxNzE0OTM1NjQ5fQ.18b7c3khZZ10RmIDBwt6hynlhnraHz1uXZZ2SWsje-I",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/api/v1/truck",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"truck"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Truck - FindById",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJTbWFydENpdHlHYXJiYWdlQ29sbGVjdG9yQVBJIiwic3ViIjoiYWxleEBjZ3RlY25vbG9naWEuY29tLmJyIiwiZXhwIjoxNzE0OTM1NjQ5fQ.18b7c3khZZ10RmIDBwt6hynlhnraHz1uXZZ2SWsje-I",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/api/v1/truck?id=1",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"truck"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Truck - FindByLicensePlate",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJTbWFydENpdHlHYXJiYWdlQ29sbGVjdG9yQVBJIiwic3ViIjoiYWxleEBjZ3RlY25vbG9naWEuY29tLmJyIiwiZXhwIjoxNzE0OTM1NjQ5fQ.18b7c3khZZ10RmIDBwt6hynlhnraHz1uXZZ2SWsje-I",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/api/v1/truck?licensePlate=ZGT5713",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"truck"
+					],
+					"query": [
+						{
+							"key": "licensePlate",
+							"value": "ZGT5713"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Truck - Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 4,\r\n    \"licensePlate\": \"ZGT5713\",\r\n    \"capacity\": 27216.21,\r\n    \"available\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/api/v1/truck",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"truck"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User - Add",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJTbWFydENpdHlHYXJiYWdlQ29sbGVjdG9yQVBJIiwic3ViIjoiYWRtaW5AZG9taW5pby5jb20iLCJleHAiOjE3MTU0MzYwNDV9.Fg3O-tWYGMDTENpPLVtT9_anSS4qMZsHJ3q7YtXHvJI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Alex Carreira\",\r\n    \"email\":\"rm97596@fiap.com.br\",\r\n    \"password\":\"123456789\",\r\n    \"role\":\"ADMIN\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/api/v1/user",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User - Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJTbWFydENpdHlHYXJiYWdlQ29sbGVjdG9yQVBJIiwic3ViIjoiYWRtaW5AZG9taW5pby5jb20iLCJleHAiOjE3MTU0MzYwNDV9.Fg3O-tWYGMDTENpPLVtT9_anSS4qMZsHJ3q7YtXHvJI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Alex Carreira\",\r\n    \"email\":\"rm97596@fiap.com.br\",\r\n    \"password\":\"123456789\",\r\n    \"role\":\"ADMIN\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/api/v1/user?id=5",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User - FindAll",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJTbWFydENpdHlHYXJiYWdlQ29sbGVjdG9yQVBJIiwic3ViIjoiYWRtaW5AZG9taW5pby5jb20iLCJleHAiOjE3MTU0MzYwNDV9.Fg3O-tWYGMDTENpPLVtT9_anSS4qMZsHJ3q7YtXHvJI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/api/v1/user",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User - FindById",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJTbWFydENpdHlHYXJiYWdlQ29sbGVjdG9yQVBJIiwic3ViIjoiYWRtaW5AZG9taW5pby5jb20iLCJleHAiOjE3MTU0MzYwNDV9.Fg3O-tWYGMDTENpPLVtT9_anSS4qMZsHJ3q7YtXHvJI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/api/v1/user?id=1",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User - FindByEmail",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJTbWFydENpdHlHYXJiYWdlQ29sbGVjdG9yQVBJIiwic3ViIjoiYWRtaW5AZG9taW5pby5jb20iLCJleHAiOjE3MTU0MzYwNDV9.Fg3O-tWYGMDTENpPLVtT9_anSS4qMZsHJ3q7YtXHvJI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/api/v1/user?email=admin@dominio.com",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "admin@dominio.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User - Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJTbWFydENpdHlHYXJiYWdlQ29sbGVjdG9yQVBJIiwic3ViIjoiYWRtaW5AZG9taW5pby5jb20iLCJleHAiOjE3MTU0MzYwNDV9.Fg3O-tWYGMDTENpPLVtT9_anSS4qMZsHJ3q7YtXHvJI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":6,\r\n    \"name\":\"Alex Carreira\",\r\n    \"email\":\"rm97596@fiap.com.br\",\r\n    \"password\":\"123456789\",\r\n    \"role\":\"ADMIN\",\r\n    \"enabled\":false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/api/v1/user",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User - ChangePassword",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJTbWFydENpdHlHYXJiYWdlQ29sbGVjdG9yQVBJIiwic3ViIjoiYWRtaW5AZG9taW5pby5jb20iLCJleHAiOjE3MTU0MzYwNDV9.Fg3O-tWYGMDTENpPLVtT9_anSS4qMZsHJ3q7YtXHvJI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":6,\r\n    \"oldPassword\":\"123456789\",\r\n    \"newPassword\":\"0123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/api/v1/user",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "API_URL",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
