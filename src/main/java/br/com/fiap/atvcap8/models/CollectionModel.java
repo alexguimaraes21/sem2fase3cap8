@@ -15,9 +15,9 @@ import java.time.LocalDateTime;
 public class CollectionModel {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_CONNECTION")
-    @SequenceGenerator(name = "SEQ_CONNECTION", sequenceName = "SEQ_USUARIOS", allocationSize = 1)
-    @Column(name = "user_id")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_COLLECTION")
+    @SequenceGenerator(name = "SEQ_COLLECTION", sequenceName = "SEQ_COLLECTION", allocationSize = 1)
+    @Column(name = "collection_id")
     private Long id;
     @Column(name = "date_time")
     private LocalDateTime dateTime;

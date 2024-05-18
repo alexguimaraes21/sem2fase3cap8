@@ -122,7 +122,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJTbWFydENpdHlHYXJiYWdlQ29sbGVjdG9yQVBJIiwic3ViIjoiYWRtaW5AZG9taW5pby5jb20iLCJleHAiOjE3MTUwMDk1MDJ9.n0I4qOfkbhbiZknmou5m56VzK8M_cHVaFeZiNHiVmfA",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJTbWFydENpdHlHYXJiYWdlQ29sbGVjdG9yQVBJIiwic3ViIjoiYWRtaW5AZG9taW5pby5jb20iLCJleHAiOjE3MTYwNTQxNDJ9.fjA1j_iIMhDcPyq_ZETzZloc4BvukTxi5NeKXbIZjpc",
 							"type": "string"
 						}
 					]
@@ -131,7 +131,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"description\": \"Bairro Santa Maria: Ruas Sizino Patusca a Tenente Americo Moreti\",\r\n    \"startTime\": \"2024-05-06T20:00:00\",\r\n    \"truck\": 1\r\n}",
+					"raw": "{\r\n    \"route\": 1,\r\n    \"dateTime\": \"2024-05-20T20:00:00\",\r\n    \"container\": 1\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -278,7 +278,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\": 2,\r\n    \"description\": \"Ruas cobertas pela coleta: Rua Flaminio Levy e Maria Mercedes Fea\",\r\n    \"startTime\": \"2024-05-05T20:00:00\",\r\n    \"truck\": 1\r\n}",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"route\": 1,\r\n    \"dateTime\": \"2024-05-20T20:00:00\",\r\n    \"container\": 1\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -307,7 +307,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJTbWFydENpdHlHYXJiYWdlQ29sbGVjdG9yQVBJIiwic3ViIjoiYWxleEBjZ3RlY25vbG9naWEuY29tLmJyIiwiZXhwIjoxNzE0OTM1NjQ5fQ.18b7c3khZZ10RmIDBwt6hynlhnraHz1uXZZ2SWsje-I",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJTbWFydENpdHlHYXJiYWdlQ29sbGVjdG9yQVBJIiwic3ViIjoiYWRtaW5AZG9taW5pby5jb20iLCJleHAiOjE3MTYwNTM4MjF9.VGHELnJ1tiDgtI7RS2fuvSCSm1jMb3aLgYIA89Xu92A",
 							"type": "string"
 						}
 					]
@@ -502,7 +502,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJTbWFydENpdHlHYXJiYWdlQ29sbGVjdG9yQVBJIiwic3ViIjoiYWRtaW5AZG9taW5pby5jb20iLCJleHAiOjE3MTUwMDk1MDJ9.n0I4qOfkbhbiZknmou5m56VzK8M_cHVaFeZiNHiVmfA",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJTbWFydENpdHlHYXJiYWdlQ29sbGVjdG9yQVBJIiwic3ViIjoiYWRtaW5AZG9taW5pby5jb20iLCJleHAiOjE3MTYwNTM4MjF9.VGHELnJ1tiDgtI7RS2fuvSCSm1jMb3aLgYIA89Xu92A",
 							"type": "string"
 						}
 					]
@@ -511,7 +511,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"description\": \"Bairro Santa Maria: Ruas Sizino Patusca a Tenente Americo Moreti\",\r\n    \"startTime\": \"2024-05-05T20:00:00\",\r\n    \"truck\": 1\r\n}",
+					"raw": "{\r\n    \"description\": \"Bairro Santa Maria: Ruas Sizino Patusca a Tenente Americo Moreti\",\r\n    \"startTime\": \"2024-05-19T20:00:00\",\r\n    \"truck\": 1\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -575,7 +575,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJTbWFydENpdHlHYXJiYWdlQ29sbGVjdG9yQVBJIiwic3ViIjoiYWRtaW5AZG9taW5pby5jb20iLCJleHAiOjE3MTQ5NDYwMjN9.c14d1Gxk3iMfKCs-G1GCWomzyZkQ-wv-E3rKgVaoyTY",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJTbWFydENpdHlHYXJiYWdlQ29sbGVjdG9yQVBJIiwic3ViIjoiYWRtaW5AZG9taW5pby5jb20iLCJleHAiOjE3MTYwNTM4MjF9.VGHELnJ1tiDgtI7RS2fuvSCSm1jMb3aLgYIA89Xu92A",
 							"type": "string"
 						}
 					]
@@ -583,7 +583,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{API_URL}}/api/v1/route?id=2",
+					"raw": "{{API_URL}}/api/v1/route?id=1",
 					"host": [
 						"{{API_URL}}"
 					],
@@ -595,7 +595,7 @@
 					"query": [
 						{
 							"key": "id",
-							"value": "2"
+							"value": "1"
 						}
 					]
 				}
@@ -687,7 +687,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJTbWFydENpdHlHYXJiYWdlQ29sbGVjdG9yQVBJIiwic3ViIjoiYWRtaW5AZG9taW5pby5jb20iLCJleHAiOjE3MTQ5NDQ2NzJ9.Zhdv8Y5mHpx2ecNcG7E9vbYMpNfKfbXqnrZ17PjdTnM",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJTbWFydENpdHlHYXJiYWdlQ29sbGVjdG9yQVBJIiwic3ViIjoiYWRtaW5AZG9taW5pby5jb20iLCJleHAiOjE3MTYwNTM4MjF9.VGHELnJ1tiDgtI7RS2fuvSCSm1jMb3aLgYIA89Xu92A",
 							"type": "string"
 						}
 					]
