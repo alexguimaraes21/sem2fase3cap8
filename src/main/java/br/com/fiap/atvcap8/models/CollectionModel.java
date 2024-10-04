@@ -15,10 +15,10 @@ import java.time.LocalDateTime;
 public class CollectionModel {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_COLLECTION")
-    @SequenceGenerator(name = "SEQ_COLLECTION", sequenceName = "SEQ_COLLECTION", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "collection_id")
     private Long id;
+
     @Column(name = "date_time")
     private LocalDateTime dateTime;
 

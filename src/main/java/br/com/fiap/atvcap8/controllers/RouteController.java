@@ -3,6 +3,7 @@ package br.com.fiap.atvcap8.controllers;
 import br.com.fiap.atvcap8.responsemodels.RouteResponseModel;
 import br.com.fiap.atvcap8.services.RouteService;
 import br.com.fiap.atvcap8.viewmodels.RouteViewModel;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
@@ -11,6 +12,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@SecurityRequirement(name = "bearer-key")
 @RequestMapping("/api")
 public class RouteController {
 

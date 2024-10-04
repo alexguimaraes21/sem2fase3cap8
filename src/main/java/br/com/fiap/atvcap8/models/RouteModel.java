@@ -15,13 +15,15 @@ import java.time.LocalDateTime;
 public class RouteModel {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_ROUTE")
-    @SequenceGenerator(name = "SEQ_ROUTE", sequenceName = "SEQ_ROUTE", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "route_id")
     private Long id;
+
     private String description;
+
     @Column(name = "start_time")
     private LocalDateTime startTime;
+
     @Column(name = "end_time")
     private LocalDateTime endTime;
 

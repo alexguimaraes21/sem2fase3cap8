@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  db:
+    container_name: fiap_database
+    image: "mysql"
+    ports:
+      - "3307:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=fiap
+      - MYSQL_DATABASE=fiap
+#    volumes:
+#      - ./mysql_data:/var/lib/mysql
+
+  api:
+    container_name: fiap_api
+    build: .
+    depends_on:
+      - db
+    ports:
+      - "8080:8080"
+    environment:
+      - DBM_HOST=db
+      - DBM_PORT=3306
+      - DBM_NAME=fiap
+      - DBM_ADMIN=root
+      - DBM_PASSWORD=fiap
+      - JWT_SECRET_FIAP=fiap2024
+      - SECURITY_ISSUER=issuer

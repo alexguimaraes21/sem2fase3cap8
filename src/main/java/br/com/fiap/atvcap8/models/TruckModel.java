@@ -17,14 +17,17 @@ import java.util.List;
 public class TruckModel {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_TRUCK")
-    @SequenceGenerator(name = "SEQ_TRUCK", sequenceName = "SEQ_TRUCK", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "truck_id")
     private Long id;
+
     @Column(name = "license_plate")
     private String licensePlate;
+
     private Float capacity;
+
     private Boolean available;
-//    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "truck")
-//    private List<RouteModel> routes;
+
+    // @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "truck")
+    // private List<RouteModel> routes;
 }
