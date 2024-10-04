@@ -14,7 +14,6 @@ FROM eclipse-temurin:17-jre-alpine
 WORKDIR /opt/app
 COPY --from=build /opt/app/target/app.jar /opt/app/app.jar
 
-
 # PORT
 EXPOSE 8080
 
