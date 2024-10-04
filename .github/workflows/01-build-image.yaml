@@ -33,7 +33,7 @@ jobs:
           context: .
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.IMAGE_NAME }}:latest
-#          build-args: MAVEN_OPTS="-DskipTests"
+          build-args: MAVEN_OPTS="-DskipTests"
 
       - name: Execute Scripts
         run: |
