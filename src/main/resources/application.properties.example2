@@ -26,3 +26,5 @@ server.error.include-binding-errors=always
 # API security settings
 security.secret_word=${JWT_SECRET_FIAP:fiap2024}
 security.issuer=${SECURITY_ISSUER:issuer}
+
+# Build test 01
