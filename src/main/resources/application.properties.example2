@@ -27,4 +27,4 @@ server.error.include-binding-errors=always
 security.secret_word=${JWT_SECRET_FIAP:fiap2024}
 security.issuer=${SECURITY_ISSUER:issuer}
 
-# Build test 03
+# Build test 04
