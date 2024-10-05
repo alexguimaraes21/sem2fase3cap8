@@ -17,7 +17,7 @@ COPY --from=build /opt/app/target/app.jar /opt/app/app.jar
 ENV PROFILE=test
 
 # PORT
-EXPOSE 80
+EXPOSE 8080
 
 # INIT
 ENTRYPOINT ["sh", "-c", "java -Dspring.profioles.active=${PROFILE} -jar /opt/app/app.jar"]
