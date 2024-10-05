@@ -5,7 +5,7 @@ services:
     container_name: fiap_database
     image: "mysql"
     ports:
-      - "3307:3306"
+      - "3306:3306"
     environment:
       - MYSQL_ROOT_PASSWORD=fiap
       - MYSQL_DATABASE=fiap
@@ -27,3 +27,5 @@ services:
       - DBM_PASSWORD=fiap
       - JWT_SECRET_FIAP=fiap2024
       - SECURITY_ISSUER=issuer
+      - PROFILE=prd
+    network_mode: host

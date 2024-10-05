@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 @Setter
 @Getter
 @Entity
-@Table(name = "TB_ROUTES")
+@Table(name = "tb_routes")
 public class RouteModel {
 
     @Id

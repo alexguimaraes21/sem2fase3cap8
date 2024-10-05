@@ -8,7 +8,7 @@ import org.hibernate.annotations.FetchMode;
 import java.util.List;
 
 @Entity
-@Table(name = "TB_TRUCKS")
+@Table(name = "tb_trucks")
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
@@ -31,3 +31,4 @@ public class TruckModel {
     // @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "truck")
     // private List<RouteModel> routes;
 }
+

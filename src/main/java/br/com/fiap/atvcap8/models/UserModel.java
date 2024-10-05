@@ -11,7 +11,7 @@ import java.util.Collection;
 import java.util.List;
 
 @Entity
-@Table(name = "TB_USERS")
+@Table(name = "tb_users")
 @Getter
 @Setter
 @NoArgsConstructor
