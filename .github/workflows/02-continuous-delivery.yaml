@@ -50,4 +50,4 @@ jobs:
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
           slot-name: 'production'
           publish-profile: ${{ secrets.AZURE_PROFILE }}
-          images: 'ghcr.io/${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:latest'
+          images: 'ghcr.io/${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.IMAGE_NAME }}:latest'
