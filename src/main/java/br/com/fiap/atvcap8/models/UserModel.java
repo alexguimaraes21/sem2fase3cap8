@@ -20,23 +20,29 @@ import java.util.List;
 public class UserModel implements UserDetails {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_USER")
-    @SequenceGenerator(name = "SEQ_USER", sequenceName = "SEQ_USER", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_id")
     private Long id;
+
     private String name;
+
     private String password;
+
     private String email;
+
     @Enumerated(EnumType.STRING)
     private UserRoleEnum role;
+
     @Column(name = "account_non_expired")
     private Boolean accountNonExpired;
+
     @Column(name = "credentials_non_expired")
     private Boolean credentialsNonExpired;
+
     @Column(name = "account_non_locked")
     private Boolean accountNonLocked;
-    private Boolean enabled;
 
+    private Boolean enabled;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

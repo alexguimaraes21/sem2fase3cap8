@@ -3,6 +3,7 @@ package br.com.fiap.atvcap8.controllers;
 import br.com.fiap.atvcap8.responsemodels.CollectionResponseModel;
 import br.com.fiap.atvcap8.services.CollectionService;
 import br.com.fiap.atvcap8.viewmodels.CollectionViewModel;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -10,6 +11,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@SecurityRequirement(name = "bearer-key")
 @RequestMapping("/api")
 public class CollectionController {
 

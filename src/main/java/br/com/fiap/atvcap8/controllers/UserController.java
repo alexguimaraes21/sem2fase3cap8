@@ -4,6 +4,7 @@ import br.com.fiap.atvcap8.responsemodels.UserResponseModel;
 import br.com.fiap.atvcap8.services.UserService;
 import br.com.fiap.atvcap8.viewmodels.UserUpdatePasswordViewModel;
 import br.com.fiap.atvcap8.viewmodels.UserViewModel;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -11,6 +12,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@SecurityRequirement(name = "bearer-key")
 @RequestMapping("/api")
 public class UserController {
 
