@@ -1,9 +1,9 @@
-name: 01 - Build Image
+name: 01 - Unit Test
 
 on:
   push:
     branches:
-      - "master"
+      - "feature/**"
 
 jobs:
   build:
