@@ -17,3 +17,15 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
+
+      - name: Build
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: false
+
+      - name: Execute Scripts
+        run: |
+          git branch
+          java --version 
+          mvn clean package
